@@ -1,0 +1,18 @@
+Q: What is the use of your project?
+A: The project mainly focuses on prioritising the COVID test on the basis of person's attributes like Age,Gender and list of Symptoms.
+
+Q: How does it do that?
+A: It uses Machine Learning to give an probabalistic Estimation of COVID19 infection according to the person's symptoms.
+
+Q: Source of Dataset?
+A: Wolfram Data Repository
+
+Q: Which algorithms did you use?
+A: Logistic Regression, Decision Tree, Random Forest Classifier, Linear SVM, Naive Bayes
+
+Q: Which algorithm performed well?
+A: Random Forest Classifier
+
+Q: What are the future work for this project?
+A: Currently we don't have any information about chronic disease data in the dataset at large level. If we get that along with the patient level data at time series way like one for 1st test and 2nd test and so on , we can study it in a detailed way.
+

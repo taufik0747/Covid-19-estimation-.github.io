@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+   <div class="container" style="padding:40px 15px 0px 15px">
+      
+      
+      <div>
+        <form class="row" method="POST" action="{% url 'index' %}">
+          {% csrf_token %}
+          <div class="col m6 s12">
+            <div >
+              <label for="full_name">Full Name<a class="tooltipped" name="full_name" data-position="right" data-tooltip="I am a tooltip"> (To generate
+                customised report)</a>
+                </label>
+              <input
+                type="text"
+                id="full_name"
+                name="full_name"
+                
+              />
+            </div>
+            <div>
+              <label for="age">Age</label>
+              <input
+                type="number"
+                step="1"
+                class="form-control"
+                id="age"
+                min=1 max=150
+                name="age" required
+              />
+            </div>  
+            <div class="form-control">
+              <label for="gender">Gender</label>
+              <select name="gender" class="browser-default" required>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+              </select>
+            </div><br>
+            <div>
+              <label for="cough">Do you live in an affected area?</label>
+              <select name="lives_in_affected_area" required class="browser-default">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </div><br>
+            <div>
+              <label for="fever">Fever</label>
+              <select name="fever" required class="browser-default">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </div><br>
+            <div>
+              <label for="cough">Dry Cough</label>
+              <select name="cough" required class="browser-default">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col m6 s12" >
+            <strong>What are the other problems?</strong><br>
+            <div>
+              <label>
+                <input id="indeterminate-checkbox fatigue" name="fatigue"  type="checkbox" />
+                <span>Fatigue</span>
+              </label>
+            </div>
+             <br>
+            <div>
+              <label>
+                <input id="indeterminate-checkbox pains" name="pains"  type="checkbox" />
+                <span>Pains</span>
+              </label>
+            </div> <br>
+            <div>
+              <label>
+                <input id="indeterminate-checkbox nasal_congestion" name="nasal_congestion"  type="checkbox" />
+                <span>Nasal Congestion</span>
+              </label>
+            </div> <br>
+            <div>
+              <label>
+                <input id="indeterminate-checkbox shortness_of_breath" name="shortness_of_breath"  type="checkbox" />
+                <span>Problem in breathing</span>
+              </label>
+            </div> <br>
+            <div>
+              <label>
+                <input id="indeterminate-checkbox runny_nose" name="runny_nose"  type="checkbox" />
+                <span>Runny Nose</span>
+              </label>
+            </div> <br>
+            <div>
+              <label>
+                <input id="indeterminate-checkbox sore_throat" name="sore_throat"  type="checkbox" />
+                <span>Sore Throat</span>
+              </label>
+            </div> <br>
+            <div>
+              <label>
+                <input id="indeterminate-checkbox diarrhea" name="diarrhea"  type="checkbox" />
+                <span>Diarrhea</span>
+              </label>
+            </div> <br>
+            <div>
+              <label>
+                <input id="indeterminate-checkbox chills" name="chills"  type="checkbox" />
+                <span>Chills</span>
+              </label>
+            </div> <br>
+            <div>
+              <label>
+                <input id="indeterminate-checkbox headache" name="headache"  type="checkbox" />
+                <span>Headache</span>
+              </label>
+            </div> <br>
+            <div>
+              <label>
+                <input id="indeterminate-checkbox vomiting" name="vomiting"  type="checkbox" />
+                <span>Vomiting</span>
+              </label>
+            </div><br>
+                  <br>
+          </div>
+          
+          <center>
+            
+            <button type="submit" class="btn" style="background-color: #1338af;border-radius: 8px;">
+              Check<i class="material-icons right">send</i>
+            </button>
+            
+          </center>
+        </form>
+      </div>
+    </div>
+    
+{% endblock %}
